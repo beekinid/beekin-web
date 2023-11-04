@@ -1,8 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+/ Import images module
+const images = require("next-images");
+
+module.exports = images({
   images: {
     domains: ["via.placeholder.com"], // whitelist host
   },
-};
-
-module.exports = nextConfig;
+  basePath: "", // Tambahkan basePath kosong untuk deploy ke root domain
+  assetPrefix: "", // Tambahkan assetPrefix kosong untuk deploy ke root domain
+});
