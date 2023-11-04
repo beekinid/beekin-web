@@ -1,4 +1,4 @@
-/ Import images module
+// Import images module
 const images = require("next-images");
 
 module.exports = images({
