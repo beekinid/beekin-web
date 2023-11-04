@@ -3,7 +3,7 @@ import HomePage from "./pages/home/page";
 // import logo from './assets/beekin-logo.png';
 
 export default function Home() {
-  const logo = require("./assets/beekin-logo.png");
+  // const logo = require("./assets/beekin-logo.png");
   return (
     <>
       <header>
