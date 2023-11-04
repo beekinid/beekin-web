@@ -7,13 +7,22 @@ export default function Home() {
   return (
     <>
       <header>
-        <nav className="bg-white border-gray-200" style={{backgroundColor: '#790252'}}>
+        <nav
+          className="bg-white border-gray-200"
+          style={{ backgroundColor: "#790252" }}
+        >
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" className="flex items-center">
-              <Image
+              {/* <Image
                 src={logo}
                 alt={"Beekin Logo"}
                 style={{ height: 50, width: 50 }}
+              /> */}
+              <Image
+                src={require("./assets/svg/beekin-logo.svg")}
+                height={50}
+                width={undefined}
+                alt={"beekin-logo"}
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Beekin
@@ -88,9 +97,7 @@ export default function Home() {
       </header>
       <HomePage />
 
-      <footer
-        className="fixed bottom-0 left-0 z-20 w-full p-4 bg-magenta800 border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6"
-      >
+      <footer className="fixed bottom-0 left-0 z-20 w-full p-4 bg-magenta800 border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6">
         <span className="text-sm sm:text-center dark:text-white">
           © 2023{" "}
           <a href="" className="hover:underline">

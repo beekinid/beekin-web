@@ -7,15 +7,15 @@ import {
   faHammer,
   faCapsules,
 } from "@fortawesome/free-solid-svg-icons";
-import banner1 from "../../assets/banner1.jpg";
-import banner2 from "../../assets/banner2.jpg";
+// import banner1 from "../../assets/banner1.jpg";
+// import banner2 from "../../assets/banner2.jpg";
 
 export default function Home() {
-  const images = [
-    banner1,
-    banner2,
-    "https://via.placeholder.com/800x400?text=Image3",
-  ];
+  // const images = [
+  //   banner1,
+  //   banner2,
+  //   "https://via.placeholder.com/800x400?text=Image3",
+  // ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const tagline = [
@@ -39,23 +39,23 @@ export default function Home() {
     },
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 10000); // Change image every 3 seconds
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setCurrentImageIndex((prevIndex) =>
+  //       prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //     );
+  //   }, 10000); // Change image every 3 seconds
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // const nextImage = () => {
+  //   setCurrentImageIndex((prevIndex) =>
+  //     prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //   );
+  // };
 
   const tag = () => {
     return (
@@ -90,24 +90,24 @@ export default function Home() {
     );
   };
 
-  const banner = () => {
-    return (
-      <div className="relative" style={{ width: "100%", height: "400px" }}>
-        <Image
-          src={images[currentImageIndex]}
-          alt={`Image ${currentImageIndex + 1}`}
-          layout="fill"
-          objectFit="cover"
-        />
-        <button
-          onClick={nextImage}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l-lg"
-        >
-          Next
-        </button>
-      </div>
-    );
-  };
+  // const banner = () => {
+  //   return (
+  //     <div className="relative" style={{ width: "100%", height: "400px" }}>
+  //       <Image
+  //         src={images[currentImageIndex]}
+  //         alt={`Image ${currentImageIndex + 1}`}
+  //         layout="fill"
+  //         objectFit="cover"
+  //       />
+  //       <button
+  //         onClick={nextImage}
+  //         className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 rounded-l-lg"
+  //       >
+  //         Next
+  //       </button>
+  //     </div>
+  //   );
+  // };
 
   const content = () => {
     return (
