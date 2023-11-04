@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    domains: ["via.placeholder.com"], // whitelist host
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
