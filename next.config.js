@@ -1,10 +1,16 @@
-// Import images module
 const images = require("next-images");
 
 module.exports = images({
   images: {
-    domains: ["via.placeholder.com"], // whitelist host
+    domains: ["via.placeholder.com"],
   },
-  basePath: "", // Tambahkan basePath kosong untuk deploy ke root domain
-  assetPrefix: "", // Tambahkan assetPrefix kosong untuk deploy ke root domain
+  basePath: "",
+  assetPrefix: "",
+  webpack(config, options) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
 });
