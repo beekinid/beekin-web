@@ -13,4 +13,5 @@ module.exports = images({
     });
     return config;
   },
+  distDir: "out", // Menambahkan pengaturan distDir
 });
