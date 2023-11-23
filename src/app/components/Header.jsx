@@ -50,7 +50,7 @@ export default function Home() {
             </Link>
             <div className="flex md:order-2">
               <Link
-                href="/beekin-web/#pricing"
+                href="/#pricing"
                 scroll={false}
                 // type="button"
                 className="text-white bg-magenta1000 hover:bg-magenta800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-magenta400 dark:hover:bg-magenta800 dark:focus:ring-blue-800"
@@ -89,7 +89,7 @@ export default function Home() {
               <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
                   <Link
-                    href="/beekin-web/#templates"
+                    href="/#templates"
                     className="block py-2 pl-3 pr-4 text-magenta1000 rounded md:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 "
                   >
                     Templates
