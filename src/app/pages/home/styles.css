@@ -1,0 +1,19 @@
+/* styles.module.css */
+.container {
+  position: relative; /* Memastikan elemen child tetap dalam konteks */
+}
+
+/* Header styling */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff; /* Sesuaikan dengan warna latar belakang yang diinginkan */
+  padding: 10px;
+  /* ... tambahkan gaya lainnya sesuai kebutuhan ... */
+}
+
+/* Content styling */
+.content {
+  margin-top: 60px; /* Sesuaikan dengan tinggi header Anda */
+  /* ... tambahkan gaya lainnya sesuai kebutuhan ... */
+}

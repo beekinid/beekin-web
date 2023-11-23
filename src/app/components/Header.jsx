@@ -1,38 +1,42 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import { Inter } from 'next/font/google'
-import '../globals.css'
+import { Inter } from "next/font/google";
+import "../globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home({ scrolling }) {
   const logo = require("../assets/beekin-logo.png");
+
   return (
     <div className={inter.className}>
       <header>
         <nav
-          className="bg-white border-gray-200"
-          style={{ backgroundColor: "#790252" }}
+          className={`bg-${
+            scrolling
+              ? "white shadow-md transition-all duration-300"
+              : "magenta100 transition-all duration-300"
+          } border-gray-200`}
         >
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <Link href={'/'} className="flex items-center">
+            <Link href={"/"} className="flex items-center">
               <Image
                 src={require("../assets/svg/beekin-logo.svg")}
                 height={50}
                 width={undefined}
                 alt={"beekin-logo"}
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white text-magenta1000">
                 Beekin
               </span>
             </Link>
             <div className="flex md:order-2">
               <Link
-                href="/#pricing"
+                href="/beekin-web/#pricing"
                 scroll={false}
                 // type="button"
-                className="text-white bg-magenta400 hover:bg-magenta800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-magenta400 dark:hover:bg-magenta800 dark:focus:ring-blue-800"
+                className="text-white bg-magenta1000 hover:bg-magenta800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-magenta400 dark:hover:bg-magenta800 dark:focus:ring-blue-800"
               >
                 Get started
               </Link>
@@ -53,7 +57,7 @@ export default function Home() {
                 >
                   <path
                     stroke="currentColor"
-                    strokeLinecap="round" 
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
                     d="M1 1h15M1 7h15M1 13h15"
@@ -68,25 +72,24 @@ export default function Home() {
               <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
                   <Link
-                    href="/#templates"
-                    className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 "
-                    // aria-current="page"
+                    href="/beekin-web/#templates"
+                    className="block py-2 pl-3 pr-4 text-magenta1000 rounded md:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 "
                   >
                     Templates
                   </Link>
                 </li>
                 <li>
                   <a
-                    href="/#pricing"
-                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    href="/beekin-web/#pricing"
+                    className="block py-2 pl-3 pr-4 text-magenta1000 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     Pricing
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/#faq"
-                    className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    href="/beekin-web/#faq"
+                    className="block py-2 pl-3 pr-4 text-magenta1000 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:hover:text-magenta800 md:dark:hover:text-magenta800 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >
                     FAQ
                   </a>

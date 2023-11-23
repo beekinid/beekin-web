@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'magenta100': '#E80F88',
-        'magenta400': '#AF0171',
-        'magenta800': '#790252',
-        'magenta1000': '#4C0033',
+        'magenta100': '#ffb8b8',
+        'magenta400': '#ed8d8d',
+        'magenta800': '#ce5a5a',
+        'magenta1000': '#b53737',
+        'magenta1200': '#970c0c'
       },
     },
   },

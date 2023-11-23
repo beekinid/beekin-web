@@ -67,7 +67,7 @@ export default function Home() {
 
   const tag = () => {
     return (
-      <div className="bg-magenta1000">
+      <div className="bg-magenta100">
         <div
           className="flex flex-row"
           style={{ justifySelf: "center", marginLeft: 32, marginRight: 32 }}
@@ -75,11 +75,11 @@ export default function Home() {
         >
           <div style={{ alignSelf: "center" }}>
             <div>
-              <h1 className="text-3xl font-bold text-white">
+              <h1 className="text-3xl font-bold text-gray-700">
                 Solusi Website Mudah untuk UMKM
               </h1>
               <p
-                className="text-md text-white"
+                className="text-md text-gray-700"
                 style={{ marginTop: 16, width: "80%" }}
               >
                 Beekin.id adalah solusi yang memudahkan UMKM untuk hadir secara
@@ -93,6 +93,11 @@ export default function Home() {
             height={500}
             width={undefined}
             alt={"website-illustration"}
+            style={{
+              transform: "scaleX(-1)",
+              marginTop: 58,
+              marginBottom: 6,
+            }}
           />
         </div>
       </div>
@@ -121,23 +126,30 @@ export default function Home() {
   const content = () => {
     return (
       <section>
+        <div style={{ height: 200 }} />
         <div
-          className="flex flex-row"
-          style={{ marginLeft: 24, marginRight: 24 }}
+          // className="flex flex-row"
+          style={{
+            marginLeft: 24,
+            marginRight: 24,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
         >
-          <Image
+          {/* <Image
             src={require("../../assets/svg/website-creator.svg")}
             height={500}
             width={undefined}
             alt={"website-illustration"}
             data-aos="zoom-in-left"
-          />
+          /> */}
           <div style={{ alignSelf: "center" }} data-aos="zoom-in-right">
             <div>
-              <h1 className="text-3xl font-bold text-gray-700 text-center">
+              <h1 className="text-3xl font-bold text-gray-500 text-center">
                 Buat Halaman Website mu dengan mudah
               </h1>
-              <p className="text-xl font-bold text-gray-700 text-center">
+              <p className="text-xl font-bold text-gray-500 text-center">
                 kamu dapat membuat websitemu dengan mudah dan terjangkau dengan
                 Beekin.id
               </p>
@@ -155,6 +167,19 @@ export default function Home() {
               </button>
             </div> */}
           </div>
+          <div
+            style={{
+              justifyContent: "center",
+              display: "flex",
+              borderRadius: 20,
+              padding:50,
+              boxShadow: "0px 6px 8px rgba(0, 0, 0, 0.1)",
+              marginTop: 50,
+              marginBottom: 50
+            }}
+          >
+            {taglineContent()}
+          </div>
         </div>
       </section>
     );
@@ -171,19 +196,34 @@ export default function Home() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                height: 200,
+                // height: 200,
+                width: 300,
               }}
               key={index}
               data-aos="zoom-out-up"
             >
-              <FontAwesomeIcon
-                icon={item.icon}
-                color="black"
-                style={{ height: 100, width: 100 }}
-                className="text-magenta400"
-              />
+              <div
+                className="align-center"
+                style={{
+                  width: 200,
+                  height: 150,
+                  borderRadius: 20,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0px 6px 8px rgba(0, 0, 0, 0.1)",
+                  marginBottom: 20,
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  color="black"
+                  style={{ height: 100, width: 100 }}
+                  className="text-magenta400"
+                />
+              </div>
               <div style={{ width: "80%" }}>
-                <p className="text-xl font-bold text-gray-700 text-center">
+                <p className="text-xl font-bold text-gray-700 text-center" style={{marginBottom: 20}}>
                   {item.title}
                 </p>
                 <p className="text-xs font-bold text-gray-600 text-center">
@@ -202,7 +242,7 @@ export default function Home() {
       <section className="bg-white dark:bg-gray-900" id="pricing">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-500 dark:text-white">
               Pilih paket layanan yang sesuai dengan kebutuhan bisnis Kamu
             </h2>
             <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
@@ -294,7 +334,7 @@ export default function Home() {
                 href="/register"
                 as="/register"
                 data-te-smooth-scroll-init
-                className="mt-auto bg-magenta800 hover:bg-magenta1000 text-white font-bold py-5 px-10 rounded"
+                className="mt-auto bg-magenta1000 hover:bg-magenta1000 text-white font-bold py-5 px-10 rounded"
               >
                 Coba Sekarang
               </Link>
@@ -397,7 +437,7 @@ export default function Home() {
                 href="/register"
                 as="/register"
                 data-te-smooth-scroll-init
-                className="mt-auto bg-magenta800 hover:bg-magenta1000 text-white font-bold py-5 px-10 rounded"
+                className="mt-auto bg-magenta1000 hover:bg-magenta1000 text-white font-bold py-5 px-10 rounded"
               >
                 Coba Sekarang
               </Link>
@@ -434,7 +474,7 @@ export default function Home() {
                 href="/register"
                 as="/register"
                 data-te-smooth-scroll-init
-                className="mt-auto bg-magenta800 hover:bg-magenta1000 text-white font-bold py-5 px-10 rounded"
+                className="mt-auto bg-magenta1000 hover:bg-magenta1000 text-white font-bold py-5 px-10 rounded"
               >
                 Hubungi Kami
               </Link>
@@ -459,10 +499,10 @@ export default function Home() {
         >
           <div style={{ alignSelf: "center" }}>
             <div>
-              <h1 className="text-3xl font-bold text-gray-700 text-center">
+              <h1 className="text-3xl font-bold text-gray-500 text-center">
                 Pilih Template dan mulai bangun cerita Brandingmu
               </h1>
-              <p className="text-xl font-bold text-gray-700 text-center">
+              <p className="text-xl font-bold text-gray-500 text-center">
                 Pilih template yang sesuai dengan kebutuhanmu dan mulai
                 membangun cerita branding kamu
               </p>
@@ -523,11 +563,11 @@ export default function Home() {
         >
           <div style={{ alignSelf: "center" }}>
             <div>
-              <h1 className="text-3xl font-bold text-gray-700">
+              <h1 className="text-3xl font-bold text-gray-500">
                 Ready! Website mu siap diakses
               </h1>
               <p
-                className="text-md text-gray-700"
+                className="text-md text-gray-500"
                 style={{ marginTop: 16, width: "80%" }}
               >
                 Websitemu siap diakses kapanpun dan dimanapun, share website mu
@@ -551,7 +591,7 @@ export default function Home() {
       <section>
         <div className="py-20" style={{ marginLeft: 48, marginRight: 48 }}>
           <p
-            className="text-xl font-bold text-gray-700"
+            className="text-xl font-bold text-gray-500"
             style={{ marginTop: 16, width: "80%" }}
           >
             Berkembang bersama kami:
@@ -600,13 +640,13 @@ export default function Home() {
           className="py-8 px-4 mx-auto sm:py-16 lg:px-6"
           style={{ marginRight: 16, marginLeft: 16 }}
         >
-          <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-500 dark:text-white">
             Pertanyaan Umum
           </h2>
           <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             <div>
               <div className="mb-10" data-aos="zoom-in-up">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-500 dark:text-white">
                   Apa itu Beekin.id?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
@@ -617,7 +657,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mb-10" data-aos="zoom-in-up">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-500 dark:text-white">
                   Bagaimana Cara Membuat website di Beekin.id?
                 </h3>
                 <div className="text-gray-500 dark:text-gray-400">
@@ -649,7 +689,7 @@ export default function Home() {
             </div>
             <div>
               <div className="mb-10" data-aos="zoom-in-up">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-500 dark:text-white">
                   Apakah Beekin.id bisa membuatkan website custom sesuai dengan
                   kebutuhan saya?
                 </h3>
@@ -660,7 +700,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="mb-10" data-aos="zoom-in-up">
-                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-500 dark:text-white">
                   Siapa saja yang dapat membuat website di Beekin.id?
                 </h3>
                 <div className="text-gray-500 dark:text-gray-400">
@@ -715,14 +755,24 @@ export default function Home() {
   return (
     <div className="bg-white">
       {tag()}
-      {/* {banner()} */}
-      {content()}
-      {pricing()}
-      {taglineContent()}
-      {chooseTemplate()}
-      {ready()}
-      {faq()}
-      {brands()}
+      <div
+        style={{
+          backgroundColor: "white",
+          borderTopLeftRadius: 40,
+          borderTopRightRadius: 40,
+          marginTop: -30,
+        }}
+      >
+        <div>
+          {content()}
+          {pricing()}
+          {/* {taglineContent()} */}
+          {chooseTemplate()}
+          {ready()}
+          {faq()}
+          {brands()}
+        </div>
+      </div>
       {callCs()}
     </div>
   );
