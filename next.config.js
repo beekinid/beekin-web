@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  distDir: "dist",
   images: {
-    domains: ["via.placeholder.com"], // whitelist host
-  },
+    unoptimized: true,
+  }
+  // images: {
+  //   domains: ["via.placeholder.com"], // whitelist host
+  // },
 };
 
 module.exports = nextConfig;
