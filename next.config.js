@@ -1,17 +1,8 @@
-const images = require("next-images");
-
-module.exports = images({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ["via.placeholder.com"],
+    domains: ["via.placeholder.com"], // whitelist host
   },
-  basePath: "",
-  assetPrefix: "",
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
-    return config;
-  },
-  distDir: "out", // Menambahkan pengaturan distDir
-});
+};
+
+module.exports = nextConfig;
