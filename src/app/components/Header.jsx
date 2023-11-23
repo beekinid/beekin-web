@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import Link from "next/link";
@@ -6,8 +7,24 @@ import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ scrolling }) {
+export default function Home() {
   const logo = require("../assets/beekin-logo.png");
+  const [scrolling, setScrolling] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const threshold = 50; // Scroll distance before color change
+
+      setScrolling(scrollTop > threshold);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={inter.className}>
